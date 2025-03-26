@@ -1,0 +1,316 @@
+.navbar{
+    background-color: rgb(148, 160, 156);
+}
+
+/* Estilo del botón flotante */
+.whatsapp-button {
+    position: fixed; /* Fijar el botón en la pantalla */
+    bottom: 20px; /* Distancia desde abajo */
+    right: 20px; /* Distancia desde la derecha */
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Alto del botón */
+    background-color: #25D366; /* Color verde de WhatsApp */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Forma circular */
+    cursor: pointer; /* Cursor de clic */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    outline: none; /* Quitar el resaltado al hacer clic */
+    transition: transform 0.2s ease-in-out; /* Animación al hacer hover */
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
+}
+
+.whatsapp-button img {
+    width: 30px; /* Tamaño del ícono */
+    height: 30px; /* Tamaño del ícono */
+    margin-top: 15px; /* Centrar verticalmente */
+}
+
+/* Estilo del cuadro emergente */
+.whatsapp-popup {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px;
+    text-align: center;
+}
+
+.whatsapp-popup h3 {
+    margin-bottom: 10px;
+}
+
+.whatsapp-popup p {
+    margin-bottom: 20px;
+}
+
+.whatsapp-popup a {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.whatsapp-popup a:hover {
+    background-color: #128C7E;
+}
+
+/* Fondo oscuro detrás del cuadro emergente */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.contenido{
+    width: 100%;
+    height: auto;
+    margin-top: 70px;
+    padding-top: 30px;
+}
+.content1{
+    width: 100%;
+    height: auto;
+    padding: 20px 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contenido .content1 .text{
+    width: 700px;
+}
+.todo{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.form_profes{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.form_profes form{
+    width: 400px;
+    height: 440px;
+    background-color: rgb(50, 46, 46);
+    border-radius: 10px;
+    box-shadow: 3px 5px 4px rgba(123, 121, 121, 0.664);
+    display: flex;justify-content: center;flex-direction: column;
+    padding: 20px;
+    color: aliceblue;
+
+
+    input{
+        width: 100%;
+    }
+
+    textarea{
+        width: 100%;
+        height: 100px;
+        resize: none;
+    }
+
+    .direcciones{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+
+      
+    }
+
+}
+
+iframe {
+    border-radius: 15px;
+    box-shadow: 3px 3px 2px black;
+}
+
+.footer{
+    margin-top: 30px;
+}
+.footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.servicios{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.servicio{
+    width: 700px;
+    height: auto;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+/*  */
+
+.contenido {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.clases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 20px;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.tarjeta h3:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: #007bff;
+}
+
+.tarjeta li {
+    list-style: none;
+    margin-bottom: 1rem;
+    padding-left: 25px;
+    position: relative;
+}
+
+.tarjeta li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #28a745;
+}
+
+.nivel-card {
+    text-align: center;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.nivel-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 1rem 0;
+}
+
+.form_profes {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    .form_profes {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form_profes form {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form_profes label {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.form_profes input,
+.form_profes textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+.form_profes textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.direcciones {
+    margin-top: 2rem;
+}
+
+.direcciones a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+}
+
+.direcciones a:hover {
+    color: #007bff;
+}
+
+.direcciones i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+iframe {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}

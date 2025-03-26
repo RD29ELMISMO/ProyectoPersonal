@@ -1,0 +1,353 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #73c3eb71;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --texto-color: #707070;
+
+    /* Transicion */
+
+    /* --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease; */ 
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    /* background: var(--body-color); */
+    transition: var(--tran-04);
+}
+
+body.dark {
+    --body-color: #ffffff;
+    --sidebar-color: #242526;
+    --primary-color: #3A3B3C;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --texto-color: #CCC;
+}
+
+/* === Resuable */
+.sidebar .text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--texto-color);
+    transition: var(--tran-04);
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar.close {
+    width: 150px;
+}
+
+.sidebar.close .text {
+    /* opacity: 0; */
+    display: none;
+}
+
+.sidebar.close header .toggle {
+    transform: translateY(-30%);
+}
+
+.sidebar.image {
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* ===Sidebar=== */
+.sidebar header {
+    position: relative;
+
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    padding: 10px 15px;
+    background: var(--sidebar-color);
+    /* background-color: skyblue; */
+    transition: +var(--tran-05);
+    z-index: 100;
+}
+
+.sidebar li {
+    height: 50px;
+    /* background: red; */
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    min-width: 60px;
+}
+
+.sidebar li .icon,
+.sidebar li .text {
+    color: var(--texto-color);
+    transition: var(--tran-02);
+}
+
+.sidebar .image-text img {
+    width: 40px;
+    border-radius: 6px;
+}
+
+.sidebar header .image-text {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar header .image-text .header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.header-text .name {
+    font-weight: 600;
+}
+
+.header-text .profesion {
+    margin-top: -2px;
+}
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    height: 25px;
+    transform: translateY(-50%) rotate(180deg);
+    width: 25px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--sidebar-color);
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--tran-03);
+}
+
+.sidebar .search-box {
+    background: var(--primary-color-light);
+    border-radius: 6px;
+}
+
+.search-box input {
+    height: 90%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    background: var(--primary-color-light);
+}
+
+.sidebar li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: var(--tran-04);
+}
+
+.sidebar li .a:hover {
+    background: var(--primary-color);
+    transition: 1.3ss ease-in-out;
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+    color: var(--sidebar-color);
+}
+
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text {
+    color: var(--texto-color);
+}
+
+.sidebar .menu-bar {
+    /* background: skyblue; */
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-bar .mode {
+    position: relative;
+    /* border-radius: 8px; */
+    /* background: var(--primary-color-light); */
+    /* background: #695CFE; */
+}
+
+.menu-bar .mode .moon-sun {
+    height: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    /* background: red; */
+}
+
+.menu-bar .mode i {
+    position: absolute;
+    transition: var(--tran-03);
+}
+
+body.dark .menu-bar .mode i.sun {
+    opacity: 1;
+}
+
+body.dark .menu-bar .mode i.moon {
+    opacity: 1;
+}
+
+.menu-bar .mode .toggle-switch {
+    position: absolute;
+    height: 60%;
+    min-width: 60px;
+    /* background: var(--toggle-color); */
+    cursor: pointer;
+}
+
+.toggle-switch {
+    position: relative;
+    height: 22px;
+    width: 30px;
+    background: var(--toggle-color);
+    border-radius: 25px;
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background: var(--sidebar-color);
+    cursor: pointer;
+    transition: var(--tran-03);
+}
+
+body.dark .switch::before {
+    left: 40px;
+}
+
+body.dark .sidebar header .toggle {
+    color: var(--texto-color);
+}
+
+.home {
+    position: relative;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 200px);
+    /* background: var(--body-color); */
+    /* transition: var(--tran-03); */
+    /* background-color: cadetblue; */
+}
+
+.sidebar.close~.home {
+    left: 120px;
+    width: calc(100% - 100px);
+}
+
+.home .cajas{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .caja{
+    width: 350px;
+    height: 150px;
+    background: #7a7890;
+    border-radius: 10px;
+    }
+    /* background: red; */
+}
+
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.chart-card {
+    background: var(--sidebar-color);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.chart-card h5 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.estadisticas {
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-stats {
+    background: var(--sidebar-color);
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-stats:hover {
+    transform: translateY(-5px);
+}
+
+.card-stats .iconos {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.card-stats .letras h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+canvas{
+    height: 300px;
+}

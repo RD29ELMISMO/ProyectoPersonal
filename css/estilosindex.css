@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    font-family: 'Times New Roman', Times, serif;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+
+.head {
+    height: 80px;
+    background-color: #2FFAD7;
+}
+
+ul {
+    list-style: none;
+
+    li {
+        a {
+            color: #000000;
+
+            &:hover {
+                color: #ffffff;
+                transition: 1s ease-in-out;
+            }
+        }
+    }
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+}
+
+.navbar {
+    background-color: #646e6d;
+}
+
+.banner {
+    width: 100%;
+    /* height: 300px;
+    background-color: bisque; */
+    margin-top: 50px;
+   
+
+    img {
+        width: 100%;
+        height: 700px;
+        /* border-radius: 45px; */
+    }
+}
+.contenido{
+    width: 100%;
+    height: auto;
+  
+}
+.registro_centros{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 15px;
+}
+.clases_particulares{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 15px;
+}
+.profesores_particulares{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 15px;
+}
+.img1{
+    
+    border-radius: 10px;
+}
+.footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.enlcae_redes{
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+
+
+/* Estilo del botón flotante */
+.whatsapp-button {
+    position: fixed; /* Fijar el botón en la pantalla */
+    bottom: 20px; /* Distancia desde abajo */
+    right: 20px; /* Distancia desde la derecha */
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Alto del botón */
+    background-color: #25D366; /* Color verde de WhatsApp */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Forma circular */
+    cursor: pointer; /* Cursor de clic */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    outline: none; /* Quitar el resaltado al hacer clic */
+    transition: transform 0.2s ease-in-out; /* Animación al hacer hover */
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
+}
+
+.whatsapp-button img {
+    width: 30px; /* Tamaño del ícono */
+    height: 30px; /* Tamaño del ícono */
+    margin-top: 15px; /* Centrar verticalmente */
+}
+
+/* Estilo del cuadro emergente */
+.whatsapp-popup {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px;
+    text-align: center;
+}
+
+.whatsapp-popup h3 {
+    margin-bottom: 10px;
+}
+
+.whatsapp-popup p {
+    margin-bottom: 20px;
+}
+
+.whatsapp-popup a {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.whatsapp-popup a:hover {
+    background-color: #128C7E;
+}
+
+/* Fondo oscuro detrás del cuadro emergente */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}

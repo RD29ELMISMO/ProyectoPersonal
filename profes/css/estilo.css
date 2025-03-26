@@ -1,0 +1,221 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+.navbar{
+    background-color: rgb(148, 160, 156);
+    font-family: 'Times New Roman', Times, serif;
+}
+.contenido_profes{
+    width: 100%;
+    height:auto; 
+}
+.imagenes{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.imagenes .img1{
+    width: 500px;
+    height: 400px;
+    padding: 10px 15px;
+    background-color: aqua;
+    border-radius: 15px;
+    box-shadow: 3px 5px 4px rgba(123, 121, 121, 0.664);
+    overflow: hidden;
+    transition: 0.5s ease;
+    background: url(../img/2.jpeg);
+    background-size: cover;
+}
+.imagenes .img2{
+    width: 500px;
+    height: 400px;
+    padding: 10px 15px;
+    background-color: aqua;
+    border-radius: 15px;
+    box-shadow: 3px 5px 4px rgba(123, 121, 121, 0.664);
+    overflow: hidden;
+    transition: 0.5s ease;
+    background: url(../img/1.webp);
+    background-size: cover;
+}
+.imagenes .img3{
+    width: 500px;
+    height: 400px;
+    padding: 10px 15px;
+    background-color: aqua;
+    border-radius: 15px;
+    box-shadow: 3px 5px 4px rgba(123, 121, 121, 0.664);
+    overflow: hidden;
+    transition: 0.5s ease;
+    background: url(../img/3.jpg);
+    background-size: cover;
+}
+.testimonio{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.testimonio .test_content{
+    width: 415px;
+    height: auto;
+    padding: 2px 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 3px 5px 4px rgba(123, 121, 121, 0.664);
+    /* overflow: hidden; */
+    transition: 0.5s ease;
+    margin-bottom: 15px;
+    background-size: cover;
+}
+.testimonio .test_content .img{
+    width: 400px;
+    height: 300px;
+    /* padding: 10px 15px; */
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 3px 5px 4px rgba(123, 121, 121, 0.664);
+    overflow: hidden;
+    transition: 0.5s ease;
+    margin-bottom: 15px;
+    background-size: cover;
+}
+
+.form_profes{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.form_profes form{
+    width: 400px;
+    height: 440px;
+    background-color: rgb(50, 46, 46);
+    border-radius: 10px;
+    box-shadow: 3px 5px 4px rgba(123, 121, 121, 0.664);
+    display: flex;justify-content: center;flex-direction: column;
+    padding: 20px;
+    color: aliceblue;
+
+
+    input{
+        width: 100%;
+    }
+
+    textarea{
+        width: 100%;
+        height: 100px;
+        resize: none;
+    }
+
+    .direcciones{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+
+      
+    }
+
+}
+
+iframe {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 3px 3px 2px black;
+}
+
+.footer{
+    margin-top: 30px;
+}
+.footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.enlcae_redes{
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+
+/* Estilo del botón flotante */
+.whatsapp-button {
+    position: fixed; /* Fijar el botón en la pantalla */
+    bottom: 20px; /* Distancia desde abajo */
+    right: 20px; /* Distancia desde la derecha */
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Alto del botón */
+    background-color: #25D366; /* Color verde de WhatsApp */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Forma circular */
+    cursor: pointer; /* Cursor de clic */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    outline: none; /* Quitar el resaltado al hacer clic */
+    transition: transform 0.2s ease-in-out; /* Animación al hacer hover */
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
+}
+
+.whatsapp-button img {
+    width: 30px; /* Tamaño del ícono */
+    height: 30px; /* Tamaño del ícono */
+    margin-top: 15px; /* Centrar verticalmente */
+}
+
+/* Estilo del cuadro emergente */
+.whatsapp-popup {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px;
+    text-align: center;
+}
+
+.whatsapp-popup h3 {
+    margin-bottom: 10px;
+}
+
+.whatsapp-popup p {
+    margin-bottom: 20px;
+}
+
+.whatsapp-popup a {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.whatsapp-popup a:hover {
+    background-color: #128C7E;
+}
+
+/* Fondo oscuro detrás del cuadro emergente */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}

@@ -1,0 +1,85 @@
+body{
+    margin: 0;padding: 0;justify-content: center;align-items: center;min-height: 100vh;
+    background-image: url(../../img/pexels-polina-kovaleva-5546885.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+.main{
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    background-image: url(../../img/qw.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 5px 10px 7px black;
+}
+#chk{
+    display: none;
+    
+}
+.iniciar{
+    position: relative;width: 100%;height: 100%;
+    left: 0px;
+}
+label{
+    color: #000;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+    cursor: pointer;
+    transition: 2s ease-in-out;
+    text-transform:uppercase;
+}
+input{
+    width: 60%;height: 20px;color: #fff;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;padding: 10px;
+    border: none;outline: none;border-radius: 10px;
+}
+input[type="submit"]{
+    width: 60%;height: 30px;background: #0069d9;color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;padding: 10px;
+    border: none;outline: none;border-radius: 10px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+input[type="submit"]:hover{
+    background: #0069d9;
+    transition: .2s ease-in-out;
+    transform: scale(1.01);
+    box-shadow: 2px 2px 5px black;
+}
+.inscribirse{
+    height: 466px;
+    background: linear-gradient(0deg, #48C3F2ff, #B9E9FCff, #30C3F3ff, #C4EEFDff, #E7F8FEff, #6DCDF8ff, #D4F2FEff, #D8F4FEff, #C0ECFCff);
+    border-radius: 40%/9%;
+    transform: translateX(88px);
+    transition: 1s ease-in-out;
+}
+.inscribirse label{
+    color: #575757;
+    transform: scale(.6);
+}
+#chk:checked ~ .inscribirse{
+    transform: translateX(-340px);
+}
+#chk:checked ~ .inscribirse label{
+    transform: scale(1);
+}
+#chk:checked ~ .iniciar label{
+transform: scale(.6);
+}
+p, a{
+    color: #221f1f;
+    border-radius: 5px;
+    box-shadow: 3px 2px 1px skyblue;
+}

@@ -1,0 +1,245 @@
+.navbar{
+    background-color: rgb(148, 160, 156);
+}
+
+/* Estilo del botón flotante */
+.whatsapp-button {
+    position: fixed; /* Fijar el botón en la pantalla */
+    bottom: 20px; /* Distancia desde abajo */
+    right: 20px; /* Distancia desde la derecha */
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Alto del botón */
+    background-color: #25D366; /* Color verde de WhatsApp */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Forma circular */
+    cursor: pointer; /* Cursor de clic */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    outline: none; /* Quitar el resaltado al hacer clic */
+    transition: transform 0.2s ease-in-out; /* Animación al hacer hover */
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
+}
+
+.whatsapp-button img {
+    width: 30px; /* Tamaño del ícono */
+    height: 30px; /* Tamaño del ícono */
+    margin-top: 15px; /* Centrar verticalmente */
+}
+
+/* Estilo del cuadro emergente */
+.whatsapp-popup {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px;
+    text-align: center;
+}
+
+.whatsapp-popup h3 {
+    margin-bottom: 10px;
+}
+
+.whatsapp-popup p {
+    margin-bottom: 20px;
+}
+
+.whatsapp-popup a {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.whatsapp-popup a:hover {
+    background-color: #128C7E;
+}
+
+/* Fondo oscuro detrás del cuadro emergente */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.contenido{
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.content1 {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 50px 0;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .content1 {
+        flex-direction: column;
+    }
+}
+
+.content1 .img img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.content1 .text {
+    flex: 1;
+}
+
+.content1 .text strong {
+    font-size: 24px;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.servicio {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+}
+
+.servicio img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.servicio-content {
+    padding: 20px;
+}
+
+.servicio span {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.preguntas {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #007bff;
+    color: white;
+}
+
+.form_profes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .form_profes {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form_profes form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form_profes input,
+.form_profes textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form_profes textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.direcciones {
+    margin-top: 20px;
+}
+
+.direcciones a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.direcciones i {
+    color: #007bff;
+    font-size: 20px;
+}
+
+.footer {
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.footer .enlcae_redes {
+    font-size: 24px;
+    margin-right: 15px;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer .enlcae_redes:hover {
+    color: #007bff;
+}
