@@ -1,10 +1,11 @@
-create database motivado;
 drop  DATABASE motivado;
+create database motivado;
+
 use motivado;
 show tables;
-select * from centro;  
+  
 
-DESCRIBE centro;
+
 show tables;
 create table noticias(
     cod int primary key auto_increment not null,
@@ -28,8 +29,8 @@ create table profesor(
     email varchar(30),
     ubicacion varchar(30)
 );
-describe profesor;
-DROP table profesor;
+
+
 alter table profesor add nivel_academico varchar(45);
 create table estudiante(
     id_estudiantes int primary key auto_increment not null,
@@ -41,10 +42,9 @@ create table estudiante(
     telf_tutor varchar(30),
     Ubicacion VARCHAR(30)
 );
-DESCRIBE estudiante;
-select * from centro
+
 alter table estudiante add correo varchar(45);
-DROP table curso;
+
 create table curso(
     id_curso int primary key auto_increment not null,
     nombre varchar(30),
@@ -59,11 +59,14 @@ create table curso(
     Foreign Key (asignatura) REFERENCES asignaturas (idasignatura)
 );
 
-INSERT into curso VALUES('','2º Bach',22000, 1,1,1,3);
+
 CREATE TABLE asignaturas(
     idasignatura int primary key AUTO_INCREMENT,
     nombre_asignatura varchar(45)
 );
+alter table asignaturas add estudianteId int;
+ALTER table asignaturas ADD FOREIGN KEY(id_profesor) REFERENCES profesor(id_prof);
+ALTER table asignaturas ADD FOREIGN KEY(estudianteId) REFERENCES estudiante(id_estudiantes);
 create table Precio(
     idtarifa int primary key auto_increment not null,
     cantidad float
@@ -78,8 +81,7 @@ create table usuario(
     tipo varchar(30)
 );
 
-INSERT INTO usuario VALUES('','Hernesto','Obiang','arsni@gmail.com','123456','admin');
-show tables;
+
 
 create table centro(
     id_centro int primary key auto_increment not null,
@@ -90,9 +92,8 @@ create table centro(
     email varchar(30),
     informacion varchar(30)
 );
-insert into centro values('','2.png','Del Rosario','Semu','222333456','arsni@gmail.com','nada de otro mundo','Hernesto Obiang');
-DESCRIBE centro;
-alter table centro add representante varchar(45);
+
+ALTER table centro add representante varchar(45);
 create table Interesados (
     id_interesado int primary key AUTO_INCREMENT NOT NULL,
     foto VARCHAR(30),
@@ -110,20 +111,3 @@ CREATE TABLE Salario (
     profesor INT,
     FOREIGN KEY (profesor) REFERENCES profesor(id_prof)
 );
-SELECT * FROM asignaturas;
-INSERT INTO asignaturas VALUES ('','matematicas'),
-('','Lengua Y Literatura'),
-('','Electrotecnia'),
-('','Fisica y quimica'); 
-show DATABASES;
-SELECT * from salario;
-select * from profesor;
-insert into profesor values('','nono','Arsenio','Perez YHONI',23,'222 432 543','arseni@gmail.com','Semu','2~ bach');
-SELECT * FRom profesor;
-INSERT into salario values ('',23000,now(),1);
-
-select s.monto, s.fecha, p.nombre from Salario s inner join profesor p on p.id_prof = s.profesor where profesor = 1;
-use clase;
-show tables;
-SELECT * from resp_salario;
- show tables;

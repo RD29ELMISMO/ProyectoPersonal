@@ -36,7 +36,7 @@ label{
     text-transform:uppercase;
 }
 input{
-    width: 60%;height: 20px;color: #fff;
+    width: 60%;height: 20px;color: #000000;
     display: flex;
     justify-content: center;
     margin: 20px auto;padding: 10px;

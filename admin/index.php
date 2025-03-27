@@ -3,25 +3,24 @@
 session_start();
 include './conexion/conexion.php';
 
-if (!isset($_SESSION['usuario'])) {
-    header("Location: login.php");
-    session_destroy();
-    exit();
-}
+// if (!isset($_SESSION['usuario'])) {
+//     header("Location: login.php");
+//     session_destroy();
+//     exit();
+// }
 
-$correo = $_SESSION['usuario'];
-$nombre = $_SESSION['nombre'];
+// $correo = $_SESSION['usuario'];
+// $nombre = $_SESSION['nombre'];
 
 // Consultas para contar los registros
-$queryProfesores = "SELECT COUNT(*) AS total FROM profesores";
-$queryEstudiantes = "SELECT COUNT(*) AS total FROM estudiantes";
-$queryCentros = "SELECT COUNT(*) AS total FROM centros";
-$queryNotificaciones = "SELECT COUNT(*) AS total FROM notificaciones";
+$queryProfesores = "SELECT COUNT(*) AS total FROM profesor";
+$queryEstudiantes = "SELECT COUNT(*) AS total FROM estudiante";
+$queryCentros = "SELECT COUNT(*) AS total FROM centro";
+// $queryNotificaciones = "SELECT COUNT(*) AS total FROM notificacion";
 
 $resultProfesores = $conexion->query($queryProfesores)->fetch_assoc()['total'];
 $resultEstudiantes = $conexion->query($queryEstudiantes)->fetch_assoc()['total'];
 $resultCentros = $conexion->query($queryCentros)->fetch_assoc()['total'];
-$resultNotificaciones = $conexion->query($queryNotificaciones)->fetch_assoc()['total'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -161,15 +160,7 @@ $resultNotificaciones = $conexion->query($queryNotificaciones)->fetch_assoc()['t
                 </div>
                 <div class="background-hover"></div>
             </div>
-            <div class="card-stats notificaciones">
-                <i class='bx bx-bell iconos'></i>
-                <div class="letras">
-                    <h5>Notificaciones</h5>
-                    <h2 class="counter" data-target="<?php echo $resultNotificaciones; ?>"><?php echo $resultNotificaciones; ?></h2>
-                    <h6><?php echo date('F Y'); ?></h6>
-                </div>
-                <div class="background-hover"></div>
-            </div>
+           
         </div>
     
      

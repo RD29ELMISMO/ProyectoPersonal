@@ -29,7 +29,7 @@ window.onload = function () {
         xhr.onreadystatechange = function () {
             if (xhr.status == 200 && xhr.readyState == 4) {
                if(xhr.response == 1){
-                window.location.href = "./index.php";
+                window.location.href = "../index.php";
                }
             }
         }

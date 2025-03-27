@@ -15,8 +15,8 @@
         <div class="iniciar">
             <form action="" id="iniciar" method="POST">
                 <label for="chk" aria-hidden="true">registrarse</label>
-                <input type="email" name="email" placeholder="Email" required="">
-                <input type="password" name="password" placeholder="Contraseña" required="">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
                 <input type="submit" name="login" value="Login">
             </form>
             <p class="text-center" style="position: absolute;left:20px;top:420px">¿No tienes cuenta? Haz click en Cancelar</p>
@@ -32,7 +32,7 @@
             </form>
         </div>
     </div>
-    <script src="./scriptLogin.js"></script>
+    <!-- <script src="./scriptLogin.js"></script> -->
 </body>
 
 </html>

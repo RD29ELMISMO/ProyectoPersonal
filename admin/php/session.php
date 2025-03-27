@@ -12,14 +12,14 @@ $password = $_POST['password'];
 
 // 1. Buscar el usuario por correo (usando sentencias preparadas)
 $sql = "SELECT * FROM usuario WHERE correo = ?";
-$stmt = mysqli_prepare($conexion, $sql);
-mysqli_stmt_bind_param($stmt, "s", $correo);
-mysqli_stmt_execute($stmt);
-$result = mysqli_stmt_get_result($stmt);
+$stmt = $conexion->prepare($sql);
+$stmt->bind_param("s", $correo);
+$stmt->execute();
+$result = $stmt->get_result();
 
 // 2. Verificar si el usuario existe
-if (mysqli_num_rows($result) > 0) {
-    $usuario = mysqli_fetch_assoc($result);
+if ($result->num_rows > 0) {
+    $usuario = $result->fetch_assoc();
     
     // 3. Verificar la contraseña
     if (password_verify($password, $usuario['pass'])) {
@@ -34,6 +34,6 @@ if (mysqli_num_rows($result) > 0) {
     echo "El correo no existe.";
 }
 
-mysqli_stmt_close($stmt);
-mysqli_close($conexion);
+$stmt->close();
+$conexion->close();
 ?>
